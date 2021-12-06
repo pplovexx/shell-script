@@ -2,8 +2,9 @@
 
 function testit {
     echo "the parameter are :$@"
-    thisarray=$1
-    echo "The received array is ${thisarray[*]}"
+    local newarray
+    newarray=(`echo $@`)
+    echo "The received array is ${newarray[*]}"
 }
 
 myarray=(1 2 3 4 5)
